@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "taskflow-backend.railway.internal";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const getTasks = () => axios.get(API_URL);
 export const addTask = (task) => axios.post(`${API_URL}/add`, task);
